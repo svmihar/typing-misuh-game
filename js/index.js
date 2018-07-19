@@ -147,6 +147,13 @@ var Component = function (_React$Component) {
                     if (arr1[i] !== arr2[i]) 
                         return false;
                     }
+
+                // var text1 = arr1.toString(); 
+                // var text2 = arr2.toString(); 
+
+                // if(text1 !== text2){
+                //   return false;
+                // }
                 
                 return true;
             }
@@ -380,7 +387,8 @@ var Component = function (_React$Component) {
                             key: index,
                             'data-correct': correct
                         }, current));
-                    });
+                        console.log(_this2.state.activeLetters[index]);
+                      });
                 if (!this.state.gameStarted) {
                     board = React.createElement('div', {
                         className: 'game__board',
