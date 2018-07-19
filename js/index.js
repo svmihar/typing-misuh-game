@@ -109,7 +109,7 @@ var Component = function (_React$Component) {
             value: function componentWillMount() {
 
                 document
-                    .addEventListener('keydown', function (e) {
+                    .addEventListener('keyup', function (e) {
                         e.preventDefault();
 
                         // handle backspace and delete
