@@ -109,7 +109,7 @@ var Component = function (_React$Component) {
             value: function componentWillMount() {
 
                 document
-                    .addEventListener('keyup', function (e) {
+                    .addEventListener('keydown', function (e) {
                         e.preventDefault();
 
                         // handle backspace and delete
@@ -141,12 +141,14 @@ var Component = function (_React$Component) {
         }, {
             key: 'checkEqual',
             value: function checkEqual(arr1, arr2) {
-                if (arr1.length !== arr2.length) 
-                    return false;
-                for (var i = arr1.length; i--;) {
-                    if (arr1[i] !== arr2[i]) 
-                        return false;
-                    }
+                // if (arr1.length !== arr2.length) 
+                //     return false;
+                // for (var i = arr1.length; i--;) {
+                //     if (arr1[i] !== arr2[i]) 
+                //         return false;
+                //     }
+                  var check =  arr1.length === arr2.length && arr1.every((value, index) => value === arr2[index]);
+                
 
                 // var text1 = arr1.toString(); 
                 // var text2 = arr2.toString(); 
@@ -155,7 +157,7 @@ var Component = function (_React$Component) {
                 //   return false;
                 // }
                 
-                return true;
+                return check;
             }
         }, {
             key: 'getRandomInt',
