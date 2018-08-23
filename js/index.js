@@ -107,12 +107,11 @@ var Component = function (_React$Component) {
         {
             key: 'componentWillMount',
             value: function componentWillMount() {
-
+             
                 document
                     .addEventListener('keydown', function (e) {
-                        e.preventDefault();
-
-                        // handle backspace and delete
+                        e.preventDefault();                       
+                        //handle backspace and delete
                         if (e.which == 46 || e.which == 8) {
                             this.setState({
                                 activeLetters: this
@@ -141,22 +140,7 @@ var Component = function (_React$Component) {
         }, {
             key: 'checkEqual',
             value: function checkEqual(arr1, arr2) {
-                // if (arr1.length !== arr2.length) 
-                //     return false;
-                // for (var i = arr1.length; i--;) {
-                //     if (arr1[i] !== arr2[i]) 
-                //         return false;
-                //     }
-                  var check =  arr1.length === arr2.length && arr1.every((value, index) => value === arr2[index]);
-                
-
-                // var text1 = arr1.toString(); 
-                // var text2 = arr2.toString(); 
-
-                // if(text1 !== text2){
-                //   return false;
-                // }
-                
+                var check = arr1.length === arr2.length && arr1.every((value, index) => value === arr2[index]);
                 return check;
             }
         }, {
@@ -390,7 +374,7 @@ var Component = function (_React$Component) {
                             'data-correct': correct
                         }, current));
                         console.log(_this2.state.activeLetters[index]);
-                      });
+                    });
                 if (!this.state.gameStarted) {
                     board = React.createElement('div', {
                         className: 'game__board',
